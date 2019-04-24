@@ -1,0 +1,159 @@
+/* SCROLLBAR */
+::-webkit-scrollbar {
+	width: 15px;
+	height: 10px;
+	background: #171717;
+	border: 1px solid #252525;
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+	background: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+	min-height: 28px;
+	background: #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #000000;
+}
+
+/* GENERAL */
+:focus {
+	outline-color: #dfdfdf;
+}
+
+html, body {
+	background-color: #f7f7f7;
+	font-family: "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+	font-weight: 600;
+	margin: 0;
+	scroll-padding-top: 3em;
+	overflow-x: hidden;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	text-align: center;
+	padding: 1em;
+}
+
+.section {
+	border: 3px solid #000;
+	margin: 2em 0;
+}
+
+.footer {
+	text-align: center;
+	padding: 1em 0;
+	margin: 0;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.pad-btm {
+	padding-bottom: 1em;
+}
+
+/* HEADER | NAVIGATION */
+header {
+	text-align: center;
+	padding-top: 1em;
+	background-color: #ecd3ae;
+}
+
+nav {
+	background-color: #f7f7f7;
+	transition: 0.2s all ease-in-out;
+}
+
+ul {
+	margin: 1em 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.nav-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 1em 0;
+}
+
+.nav-item {
+	display: inline-block;
+	margin: 0 1em;
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+.nav-item a {
+	color: #2c3539;
+}
+
+.nav-sticky {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.is-hidden {
+	transform: translateY(-4em);
+}
+
+/* IMAGES */
+.logo-small, .logo-large {
+	width: auto;
+	margin: 0;
+}
+
+.logo-small {
+	height: 6em;
+}
+
+.logo-large {
+	height: 12em;
+}
+
+.hero {
+	width: 100%;
+}
+
+
+
+#store-info {
+	margin: 1em 3em 1em auto;
+	line-height: 2.5;
+}
+
+#map {
+	width: 30em;
+	height: 25em;
+	margin: 1em auto 1em 1em;
+	border: 2px solid #000;
+}
+
