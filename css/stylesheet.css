@@ -25,13 +25,15 @@
 }
 
 html, body {
-	background-color: #f7f7f7;
+	background-image: url("../images/bg-light.png");
+	background-color: #111111;
 	font-family: "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
 	font-weight: 600;
 	margin: 0;
-	scroll-padding-top: 3em;
+	scroll-padding-top: 3rem;
 	overflow-x: hidden;
+	transition: 0.2s all ease-in-out;
 }
 
 p {
@@ -40,21 +42,27 @@ p {
 
 a {
 	text-decoration: none;
+	color: #af2319;
+}
+
+li {
+	list-style-type: none;
 }
 
 .container {
 	text-align: center;
-	padding: 1em;
+	padding: 1rem;
 }
 
 .section {
+	background-color: #f7f7f7;
 	border: 3px solid #000;
-	margin: 2em 0;
+	margin: 2rem 0;
 }
 
 .footer {
 	text-align: center;
-	padding: 1em 0;
+	padding: 1rem 0;
 	margin: 0;
 }
 
@@ -69,47 +77,21 @@ a {
 	justify-content: space-evenly;
 }
 
-.pad-btm {
-	padding-bottom: 1em;
-}
-
-/* HEADER | NAVIGATION */
-header {
-	text-align: center;
-	padding-top: 1em;
-	background-color: #ecd3ae;
-}
-
+/* NAVIGATION */
 nav {
-	background-color: #f7f7f7;
-	transition: 0.2s all ease-in-out;
-}
-
-ul {
-	margin: 1em 0;
-	padding: 0;
-}
-
-li {
-	list-style-type: none;
-}
-
-.nav-flex {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0;
-	padding: 1em 0;
+	padding: 1rem 0;
+	background-color: #f0f0f0; 
 }
 
-.nav-item {
+nav > a {
 	display: inline-block;
-	margin: 0 1em;
-	font-size: 1.1em;
+	margin: 0 1.7rem;
+	font-size: 1.5em;
 	font-weight: 400;
-}
-
-.nav-item a {
 	color: #2c3539;
 }
 
@@ -118,11 +100,22 @@ li {
 	top: 0;
 	right: 0;
 	left: 0;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.75);
+	box-shadow: 0 5px 5px rgba(255, 255, 255, 0.1);
 }
 
-.is-hidden {
-	transform: translateY(-4em);
+.nav-sticky > a {
+	margin: 0 1rem;
+	font-size: 1em;
+	color: #dfdfdf;
+}
+
+nav, nav > a, .nav-sticky, .nav-sticky > a, #nav-logo {
+	transition: 0.2s all ease-in-out;
+}
+
+.zero-height {
+	height: 0 !important;
 }
 
 /* IMAGES */
@@ -132,28 +125,43 @@ li {
 }
 
 .logo-small {
-	height: 6em;
+	height: 6rem;
 }
 
 .logo-large {
-	height: 12em;
+	height: 12rem;
 }
 
 .hero {
 	width: 100%;
+	max-height: 40rem;
+	object-fit: cover;
+	object-position: center;
+	animation: movePosition 10s ease-in-out 1s infinite alternate both;
+	transition: all 0.3s ease-in-out;
 }
 
+/*
+.hero:hover {
+	max-height: 60rem;
+	object-fit: fill;
+}
+*/
 
+@keyframes movePosition {
+	0%		{object-position: left top;}
+	100%	{object-position: right bottom;}
+}
 
+/* MISCELLANEOUS */
 #store-info {
-	margin: 1em 3em 1em auto;
+	margin: 1rem 3rem 1rem auto;
 	line-height: 2.5;
 }
 
 #map {
-	width: 30em;
-	height: 25em;
-	margin: 1em auto 1em 1em;
+	width: 30rem;
+	height: 25rem;
+	margin: 1rem auto 1rem 1rem;
 	border: 2px solid #000;
 }
-

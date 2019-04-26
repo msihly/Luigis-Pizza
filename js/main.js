@@ -1,23 +1,20 @@
 var scrollPos = 0,
 	nav = document.getElementById("navbar"),
-	navTop = nav.offsetTop;
+	navLogo = document.getElementById("nav-logo"),
+	navTop = navLogo.offsetTop;
 
 function scrollNav() {
 	if (window.scrollY >= navTop) {
 		nav.classList.add("nav-sticky");
+		navLogo.classList.add("zero-height");
 		document.body.style.paddingTop = nav.offsetHeight + 'px';
-	} else {
+	} else {		
 		nav.classList.remove("nav-sticky");
+		navLogo.classList.remove("zero-height");	
 		document.body.style.paddingTop = 0;
 	}
-	/*
-	if (window.scrollY < scrollPos && nav.classList.contains("nav-sticky")) {
-		nav.classList.add("is-hidden");
-	} else {
-		nav.classList.remove("is-hidden");
-	}
-	*/
+
 	scrollPos = window.scrollY;
 }
 
-window.addEventListener("scroll", scrollNav);
+window.addEventListener("scroll", function() {requestAnimationFrame(scrollNav);});
