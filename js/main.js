@@ -17,4 +17,12 @@ function scrollNav() {
 	scrollPos = window.scrollY;
 }
 
+function formSubmit() {
+    event.preventDefault();
+}
+
 window.addEventListener("scroll", function() {requestAnimationFrame(scrollNav);});
+window.onload = function() {
+    document.getElementById("resSubmit").addEventListener("click", formSubmit);
+    document.getElementById("conSubmit").addEventListener("click", formSubmit);
+}
