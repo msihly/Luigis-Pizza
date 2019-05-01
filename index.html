@@ -12,85 +12,95 @@
 			<a href="#">Home</a>
 			<a href="#menu">Menu</a>
 			<a href="#reservations">Reservations</a>
-			<img src="images/logo.png" id="nav-logo" class="logo-small">
-			<a href="#store-finder">Store Finder</a>
-			<a href="#contact">Contact Us</a>
-			<a href="#about">About</a>
+			<img src="images/logo-black.png" id="nav-logo" class="logo-small">
+			<a href="#location">Location</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
 		</nav>
 		<main>
 			<div>
 				<img src="images/pizza-1.jpeg" class="hero">
 			</div>
-			<div id="menu">
-
+			<div id="menu" class="section">
+                <h1>MENU</h1>
 			</div>
-			<div class="container">
-				<div id="reservations" class="section">
-					<h2>Make a Reservation</h2>
-					<form action="">
-					<input type="text" name="firstname" value="First Name"><br>
-					<input type="text" name="lastname" value="Last Name"><br>
-					<input type="email" name="email" value="Email"><br>
-					<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9}{3}" value="Phone Number"><br>
-					<input type="date" name="resevdate"><br>
-					<input type="time" name="resrevtime"><br>
-					</form>
-				</div>
-				<div id="store-finder" class="section flex-col">
-					<h2>Store Finder</h2>
-					<div class="flex-row">
-						<ul id="store-info">
-							<li>55 Lexington Ave, New York, NY 10010</li>
-								<br>
-							<li>Monday - Friay 7:00AM - 10:00PM</li>
-							<li>Saturday 9:00AM - 10:00PM</li>
-							<li>Sunday 9:00AM - 6:00PM</li>
-								<br>
-							<li>Tel: <a href="tel:516-555-1723">(516) 555-1723</a></li>
-							<li>Email: <a href="mailto:info@luigis.com">info@luigis.com</a></li>
-						</ul>
-						<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9788300721343!2d-73.98534538434394!3d40.74049134380836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a7550271dd%3A0xec88233d3a5d270f!2sBaruch+College!5e0!3m2!1sen!2sus!4v1555765678441!5m2!1sen!2sus"></iframe>
-					</div>
-				</div>
-				<div id="contact" class="section">
-					<h2>Contact Us</h2>
-					<h4>Let us know how we are doing:</h4>
-					<form action="">
-							<input type="text" name="firstname" value="First Name"><br>
-							<input type="text" name="lastname" value="Last Name"><br>
-							<input type="email" name="email" value="Email"><br>
-							<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9}{3}" value="Phone Number"><br>
-							<select name="Choose A Category">
-								<option value="comments/suggestions">Comments/Suggestions</option>
-								<option value="praise">Praise</option>
-								<option value="complaint">Complaint</option>
-								<option value="marketing request">Marketing Resquest</option>
-							</select><br>
-							<textarea name="message" rows="10"cols="30"></textarea><br>
-							<input type="submit" value="Submit">
-					</form>
-				</div>
-				<div id="about" class="section">
-					<h2>Meet the Founders</h2>
-					<div id="Sihly">
-						<img src="" alt="">
-						<p>         </p>
-					</div>	
-					<div id="Razu">
-							<img src="" alt="">
-					</div>	
-					<h2>Our Mission Statement</h2>
-						<div id="mission">
-							<img src="" alt="">
-							<p>           </p>	
-						</div>
-				</div>
-			</div>
+            <div id="reservations" class="pad-ctn div-bg-img small-ctn">
+                <h1>MAKE A RESERVATION</h1>
+                <form action="">
+                    <input type="text" name="fname" id="resFName" placeholder="First Name" pattern="[a-z][A-Z]" required>
+                    <input type="text" name="lname" id="resLName" placeholder="Last Name" pattern="[a-z][A-Z]" required>
+                    <input type="email" name="email" id="resEmail" placeholder="Email">
+                    <input type="tel" name="phone" id="resPhone" placeholder="Phone Number" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" required>
+                    <input type="date" name="rdate" id="resDate" required>
+                    <input type="time" name="rtime" id="resTime" required>
+                    <!-- <input type="select" name="rtime" id="resTime" required> -->
+                    <input type="submit" value="Reserve" id="resSubmit">
+                </form>
+            </div>
+            <div id="location" class="flex-col div-bg-img large-ctn">
+                <h1>LOCATION</h1>
+                <div class="flex-row">
+                    <ul id="store-info">
+                        <li><img src="images/location.png" class="icon">55 Lexington Ave, New York, NY 10010</li>
+                            <br>
+                        <li><img src="images/clock.png" class="icon">Monday - Friday 7:00AM - 10:00PM</li>
+                        <li>Saturday 9:00AM - 10:00PM</li>
+                        <li>Sunday 9:00AM - 6:00PM</li>
+                            <br>
+                        <li><img src="images/telephone.png" class="icon">Tel: <a href="tel:516-555-1723">(516) 555-1723</a></li>
+                        <li><img src="images/email.png" class="icon">Email: <a href="mailto:info@luigis.com">info@luigis.com</a></li>
+                    </ul>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9788300721343!2d-73.98534538434394!3d40.74049134380836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a7550271dd%3A0xec88233d3a5d270f!2sBaruch+College!5e0!3m2!1sen!2sus!4v1555765678441!5m2!1sen!2sus"></iframe>
+                </div>
+            </div>
+            <div id="about" class="pad-ctn">
+                <h1>MEET THE FOUNDERS</h1>
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <img src="images/no-image.jpg" class="pfp">
+                        <p class="small-ctn">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid consequuntur mollitia odit illo possimus dolorem ad quas. Ipsa delectus eos,
+                            adipisci, possimus sunt ducimus mollitia vitae porro dolor sint enim! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iusto.
+                            Maxime aliquam molestias veritatis tempore delectus asperiores iste! Eveniet nisi voluptas pariatur enim mollitia aut blanditiis molestias dicta, illum quam.
+                        </p>
+                    </div>
+                    <div class="flex-col">
+                        <img src="images/no-image.jpg" class="pfp">
+                        <p class="small-ctn">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid consequuntur mollitia odit illo possimus dolorem ad quas. Ipsa delectus eos,
+                            adipisci, possimus sunt ducimus mollitia vitae porro dolor sint enim! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, iusto.
+                            Maxime aliquam molestias veritatis tempore delectus asperiores iste! Eveniet nisi voluptas pariatur enim mollitia aut blanditiis molestias dicta, illum quam.
+                        </p>
+                    </div>  
+                </div>             
+                <!-- <h2>OUR MISSION STATEMENT</h2> -->
+            </div>
+            <div id="contact" class="pad-ctn div-bg-img">
+                <h1>CONTACT US</h1>
+                <form action="" class="flex-col">
+                    <div class="flex-row">
+                        <input type="text" name="fname" id="conFName" placeholder="First Name" class="form-row">
+                        <input type="text" name="lname" id="conLName" placeholder="Last Name">
+                    </div>
+                    <div class="flex-row">
+                        <input type="email" name="email" id="conEmail" placeholder="Email" class="form-row">
+                        <input type="tel" name="phone" id="conPhone" pattern="[0-9]{3}-[0-9]{2}-[0-9}{3}" placeholder="Phone Number">
+                    </div>
+                    <select name="category">
+                        <option value="comments/suggestions">Comments/Suggestions</option>
+                        <option value="praise">Praise</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="marketing request">Marketing Resquest</option>
+                    </select>
+                    <textarea name="message" placeholder="Leave your message here"></textarea>
+                    <input type="submit" value="Submit" id="conSubmit">
+                </form>
+            </div>
 		</main>
-        <footer class="section footer">
-			<img class="logo-large" src="images/logo.png">
+        <footer class="footer">
+			<img class="logo-large" src="images/logo-black.png">
 			<p>Copyright &copy; 2019 | All Rights Reserved</p>
 		</footer>
 		<script src="js/main.js"></script>
-	</body>	
+	</body>
 </html>
