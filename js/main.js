@@ -19,7 +19,6 @@ function scrollNav() {
 	scrollPos = window.scrollY;
 }
 
-<<<<<<< HEAD
 function formSubmit(event) {
     event.preventDefault();
     document.getElementById(this.dataset.submit).classList.remove("hidden");
@@ -34,6 +33,27 @@ function changeTab() {
     activeMenuTab.classList.add("active");
     activeMenuContent.classList.add("active");
 }
+
+/*
+function addZero(num) {
+    if (num < 10) {num = "0" + num;}
+    return num;
+}
+
+function populateTime(el, startHours, startMins, endHours, endMins, interval) {
+    var startTime = new Date(),
+        endTime = new Date();
+    startTime.setHours(startHours, startMins);
+    endTime.setHours(endHours, endMins);
+    for (let i = startTime.getTime(); i < endTime.getTime(); i += interval ) {  // i += interval does not work. Need a date modification method.
+        let option = document.createElement("option"),
+            formattedTime = i.getHours() + ":" + addZero(i.getMinutes());
+        option.textContent = formattedTime;
+        option.value = formattedTime;
+        el.appendChild(option);
+    }
+}
+*/
 
 document.addEventListener("DOMContentLoaded", function () {
     var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
@@ -70,17 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
         option.value = timeOptions[i];
         selectTime.appendChild(option);
     }
+    
+   // populateTime(document.getElementById("resTime"), 7, 00, 9, 30, 30);
 });
 
 window.addEventListener("scroll", function() {requestAnimationFrame(scrollNav);});
-=======
-function formSubmit() {
-    event.preventDefault();
-}
-
-window.addEventListener("scroll", function() {requestAnimationFrame(scrollNav);});
-window.onload = function() {
-    document.getElementById("resSubmit").addEventListener("click", formSubmit);
-    document.getElementById("conSubmit").addEventListener("click", formSubmit);
-}
->>>>>>> be49665c5420d4859ad32038dafeb93011e32d28
